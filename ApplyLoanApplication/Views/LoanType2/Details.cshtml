@@ -1,0 +1,66 @@
+﻿@model ApplyLoanApplication.Models.LoanType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LoanType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanInterestRatePerAnnum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanInterestRatePerAnnum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinimumLoanAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinimumLoanAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaximumLoanAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaximumLoanAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinimumAgeRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinimumAgeRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxmimAgeRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxmimAgeRequired)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LoanCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

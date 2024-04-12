@@ -1,0 +1,133 @@
+﻿@model IEnumerable<ApplyLoanApplication.Models.LoanApplication>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelectedLoanType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequiredLoanAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateOfInterest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanTenure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanEMI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanctionedAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanctionedTenure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanctionedInterestRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanctionedEMI)
+            </th>
+
+            <th></th>
+        </tr>
+    </table>
+</form>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.RequiredLoanAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RateOfInterest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanTenure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanEMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanctionedAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanctionedTenure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanctionedInterestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanctionedEMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RejectionRemark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ApplicationNumber }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ApplicationNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ApplicationNumber })
+        </td>
+    </tr>
+}
+
+
